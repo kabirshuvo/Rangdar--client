@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {logo} from '../../assets/index.js'
-import { FaTruck, FaHamsa, FaCaretDown, FaSearch   } from 'react-icons/fa';
+import { FaTruck, FaHamsa, FaCaretDown, FaSearch, FaShoppingCart   } from 'react-icons/fa';
 import { categories } from '../../constants/index.js';
 const Header = () => {
    const [showAll, setShowall] = useState(false)
@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <nav >
-   <div className='w-full bg-rangDaru_light text-white px-4 py-1 flex items-center gap-4'>
+   <div className='w-full bg-rangDaru_light text-white px-4 py-1 flex items-center gap-1'>
          
 {/* image statrt == logo */}
 <div className='headerHover '>
@@ -58,13 +58,35 @@ const Header = () => {
 </div>
 {/* Search Ends */}
 {/* SignIn statrt */}
+<div className='flex flex-col items-start justify-center headerHover text-sm'>
 
+<p className='text-xs text-lightText font-light'>Hello, signIn</p>
+  
+<p className='flex items-center gap-1 text-sm font-semibold -mt-1 '>Accounts & Lists <span> <FaCaretDown/> 
+  </span></p> 
+
+</div>
 {/* SignIn Ends */}
 {/* Orders statrt */}
+<div className='flex flex-col items-start justify-center headerHover text-sm'>
 
+<p className='text-xs text-lightText font-light'>Returns</p>
+  
+<p className='flex items-center gap-1 text-sm font-semibold -mt-1 '>& Orders <span> <FaCaretDown/> 
+  </span></p> 
+
+</div>
 {/* Orders Ends */}
 {/* Cart statrt */}
+<div className='flex items-start -mb-2 gap-1 justify-center headerHover  relative'>
+<FaShoppingCart className='text-2xl mt-1'/>
+<p className='text-sm font-semibold mt-3'>
+Cart
+  <span className='absolute -top-1 left-8 font-semibold  px-1 h-5 bg-[#f3a847] text-rangDaru_light rounded-full '>
+  12</span>
+  </p> 
 
+</div>
 {/* Cart statrt */}
 
    </div>
